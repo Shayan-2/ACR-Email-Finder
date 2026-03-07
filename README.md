@@ -1,6 +1,6 @@
 # ACR-Email-Finder
 
-This project scans an email inbox for **Academic Consideration Request (ACR)** emails, downloads attached PDF files, extracts student details from each PDF, and creates an Excel file for easy review.
+This project scans an email inbox for Academic Consideration Request (ACR) emails, downloads attached PDF files, extracts student details from each PDF, and creates an Excel file for easy review.
 
 ## What this app does
 
