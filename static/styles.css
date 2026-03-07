@@ -1,0 +1,151 @@
+:root {
+    --bg-1: #f8f0dc;
+    --bg-2: #d8ece3;
+    --ink: #1f2933;
+    --accent: #006d77;
+    --accent-2: #f4a261;
+    --card: rgba(255, 255, 255, 0.85);
+    --danger: #a4161a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: radial-gradient(circle at 20% 10%, var(--bg-2), transparent 35%),
+                radial-gradient(circle at 80% 0%, #ffe8d6, transparent 30%),
+                linear-gradient(160deg, var(--bg-1), #f4f1de);
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 2rem auto 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero {
+    background: var(--card);
+    border: 2px solid rgba(0, 109, 119, 0.2);
+    border-radius: 20px;
+    padding: 1.6rem;
+    backdrop-filter: blur(2px);
+    animation: rise 500ms ease-out;
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    background: linear-gradient(120deg, var(--accent), #0a9396);
+    color: white;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 109, 119, 0.25);
+}
+
+.card {
+    margin-top: 1rem;
+    background: var(--card);
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    animation: rise 600ms ease-out;
+}
+
+.error {
+    border-left: 6px solid var(--danger);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.65rem;
+}
+
+th {
+    background: rgba(0, 109, 119, 0.08);
+}
+
+a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+a:hover {
+    color: #0a9396;
+}
+
+.bg-shape {
+    position: fixed;
+    z-index: 1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bg-shape-1 {
+    width: 260px;
+    height: 260px;
+    background: rgba(244, 162, 97, 0.2);
+    top: -80px;
+    left: -80px;
+}
+
+.bg-shape-2 {
+    width: 360px;
+    height: 360px;
+    background: rgba(0, 109, 119, 0.15);
+    bottom: -120px;
+    right: -100px;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 95%;
+        margin-top: 1rem;
+    }
+
+    .hero, .card {
+        padding: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.92rem;
+    }
+}
