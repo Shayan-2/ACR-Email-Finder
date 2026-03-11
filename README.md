@@ -31,10 +31,12 @@ acr_project/
     models.py
 ```
 
-## 1. Create and activate a virtual environment (PowerShell)
+## 1. Clone the repository and create a virtual environment (PowerShell)
 
 ```powershell
-cd "c:\Users\shaya\OneDrive\Documents\Toronto Metropolitan University\Winter 2026\CPS 506\BigOF Project\acr_project"
+git clone https://github.com/Shayan-2/ACR-Email-Finder.git
+cd ACR-Email-Finder
+
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
